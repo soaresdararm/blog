@@ -6,13 +6,13 @@ export function Header() {
     <header>
       <h1
         className={clsx(
-          "text-4xl/normal font-extrabold py-8",
-          "sm:text-5xl/normal sm:py-10",
-          "md:text-6xl/normal md:py-11",
-          "lg:text-7xl/normal lg:py-12"
+          "text-3xl/normal font-extrabold py-4",
+          "sm:text-2xl/normal sm:py-4",
+          "md:text-3xl/normal md:py-6",
+          "lg:text-4xl/normal lg:py-7"
         )}
       >
-        <Link href="/">The Blog</Link>
+        <Link href="/"> Blog da Dara</Link>
       </h1>
     </header>
   );

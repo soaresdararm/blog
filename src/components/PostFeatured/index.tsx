@@ -1,7 +1,7 @@
-import ErrorMessage from '../ErrorMessage';
-import { PostCoverImage } from '../PostCoverImage';
-import { PostSummary } from '../PostSummary';
-import { findAllPublicPostsCached } from '@/lib/post/queries/public';
+import ErrorMessage from "../ErrorMessage";
+import { PostCoverImage } from "../PostCoverImage";
+import { PostSummary } from "../PostSummary";
+import { findAllPublicPostsCached } from "@/lib/post/queries/public";
 
 export async function PostFeatured() {
   const posts = await findAllPublicPostsCached();
@@ -9,8 +9,8 @@ export async function PostFeatured() {
   if (posts.length <= 0)
     return (
       <ErrorMessage
-        contentTitle='Ops 😅'
-        content='Ainda não criamos nenhum post.'
+        contentTitle="Ops 😅"
+        content="Ainda não criamos nenhum post."
       />
     );
 
@@ -19,7 +19,7 @@ export async function PostFeatured() {
   const postLink = `/post/${post.slug}`;
 
   return (
-    <section className='grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group'>
+    <section className="grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group">
       <PostCoverImage
         linkProps={{
           href: postLink,
@@ -35,7 +35,7 @@ export async function PostFeatured() {
 
       <PostSummary
         postLink={postLink}
-        postHeading='h1'
+        postHeading="h1"
         createdAt={post.createdAt}
         excerpt={post.excerpt}
         title={post.title}
