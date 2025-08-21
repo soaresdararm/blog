@@ -1,4 +1,4 @@
-import { PostModel } from "@/modules/models/post/post-model";
+import { PostModel } from "@/models/post/post-model";
 import { PostRepository } from "./post-repository";
 import { resolve } from "path";
 import { readFile, writeFile } from "fs/promises";

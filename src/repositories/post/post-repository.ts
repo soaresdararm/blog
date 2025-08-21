@@ -1,4 +1,4 @@
-import { PostModel } from "@/modules/models/post/post-model";
+import { PostModel } from "@/models/post/post-model";
 
 export interface PostRepository {
   findAllPublic(): Promise<PostModel[]>;
